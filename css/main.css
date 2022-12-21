@@ -1,0 +1,296 @@
+body {
+    color: #444444;
+    font-size: 18px;
+}
+
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.sec {
+    padding: 100px 0;
+}
+
+* {
+    outline: 1px solid t-omato;
+}
+
+/* 세팅 css */
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    line-height: 120px;
+    padding: 0 80px;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.header .gnb_wrap {
+    justify-content: space-between;
+}
+
+.header h1 {
+    font-size: 0;
+}
+
+.header .gnb {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    color: #fff;
+    background: url(../img/nav01.jpg) no-repeat center center/cover;
+    z-index: -1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.header .gnb.on {
+    height: 100vh;
+}
+
+.header .gnb ul {
+    margin: 180px 0;
+}
+
+.header .gnb ul>li {
+    text-align: center;
+    line-height: 100px;
+}
+
+.header .gnb ul>li a {
+    display: block;
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.header .right a {
+    color: #fff;
+    font-size: 18px;
+}
+
+.header .right a::after {
+    content: "\e91c";
+    font-family: xeicon !important;
+    margin-left: 20px;
+}
+
+.header .right a.on::after {
+    content: "\e9af";
+}
+
+.header .btm_left {
+    position: fixed;
+    bottom: 105px;
+    left: 21px;
+    line-height: 1;
+    transform: rotate(-90deg);
+}
+
+.header .btm_left a {
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.header .btm_right {
+    position: fixed;
+    bottom: 80px;
+    right: 80px;
+    line-height: 1;
+}
+
+.header .btm_right a {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+}
+
+/* header */
+
+.mainVisual {
+    background: url(../img/mainvisual_bg.jpg) no-repeat fixed center center/cover;
+    padding: 200px 0 100px 0;
+    margin-top: -120px;
+    height: 100vh;
+}
+
+.mainVisual .top h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+    font-size: 100px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 3px;
+    text-align: center;
+
+    z-index: 1;
+}
+
+.mainVisual .top h2 em {
+    padding: 0 100px;
+}
+
+.mainVisual .top figure {
+    overflow: hidden;
+}
+
+.mainVisual .top figure img {
+    max-width: 100%;
+    transform: scale(1.2);
+    animation: zoom-out 5s forwards linear;
+}
+
+@keyframes zoom-out {
+    to {
+        transform: scale(1);
+    }
+}
+
+.mainVisual .bottom .scroll_down {
+    position: absolute;
+    bottom: 130px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.mainVisual .bottom .scroll_down figure {
+    animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* main visual */
+
+.mainContent {
+    background: url(../img/mainContent01_bg.jpg) no-repeat center center /cover;
+}
+
+.mainContent .inner {
+    gap: 30px;
+}
+
+.mainContent .inner>div {
+    height: 750px;
+}
+
+.mainContent .left_img {
+    position: relative;
+}
+
+.mainContent .left_img figure {
+    position: sticky;
+    top: 150px;
+    left: 0;
+}
+
+.mainContent .left_img img {
+    width: 450px;
+}
+
+.mainContent .right_txt {
+    padding: 70px;
+    line-height: 1.8;
+}
+
+.mainContent .right_txt strong {
+    display: block;
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 30px;
+}
+
+.mainContent .right_txt span {
+    display: block;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.mainContent .right_txt p {
+    font-weight: 300;
+}
+
+/* main content */
+
+.mainBanner {
+    background: url(../img/banner01_bg.jpg) no-repeat center top /cover;
+    color: #082b26;
+    ;
+}
+
+.mainBanner h2 {
+    font-size: 60px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.mainBanner p {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.mainBanner .inner .itm {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-left: 1px solid #ddd;
+}
+
+.mainBanner .inner .itm:nth-of-type(4) {
+    border-right: 1px solid #ddd;
+}
+
+.mainBanner .itm strong {
+    font-size: 60px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+/* main banner */
+
+.designConsect .cst_top {
+    letter-spacing: 1px;
+}
+
+.designConsect .cst_top::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 350px;
+    background: url(../img/consect_bg.jpg) no-repeat fixed center center/cover;
+
+}
+
+.designConsect .cst_top strong {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.designConsect .cst_top h2 {
+    font-size: 60px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
