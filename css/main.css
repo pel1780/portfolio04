@@ -24,14 +24,23 @@ body {
 /* 세팅 css */
 
 .header {
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     line-height: 120px;
     padding: 0 80px;
     z-index: 999;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0);
+    transition: 0.5s;
+}
+
+.header.on {
+    top: -120px;
+}
+
+.header.bg {
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .header .gnb_wrap {
@@ -121,7 +130,6 @@ body {
 .mainVisual {
     background: url(../img/mainvisual_bg.jpg) no-repeat fixed center center/cover;
     padding: 200px 0 100px 0;
-    margin-top: -120px;
     height: 100vh;
 }
 
@@ -270,11 +278,12 @@ body {
 
 /* main banner */
 
-.designConsect .cst_top {
+.designConsect .dc_top {
     letter-spacing: 1px;
+    margin-bottom: 100px;
 }
 
-.designConsect .cst_top::after {
+.designConsect .dc_top::after {
     content: "";
     display: block;
     width: 100%;
@@ -283,14 +292,66 @@ body {
 
 }
 
-.designConsect .cst_top strong {
+.designConsect .dc_top strong {
     display: block;
     font-size: 25px;
     margin-bottom: 20px;
 }
 
-.designConsect .cst_top h2 {
+.designConsect .dc_top h2 {
     font-size: 60px;
     font-weight: 500;
     margin-bottom: 50px;
+}
+
+.designConsect .dc_btm>div {
+    flex: 1 0 50%;
+}
+
+.designConsect .dc_btm_left {
+    /* position: relative; */
+    padding-right: 150px;
+}
+
+.designConsect .dc_btm_left_wrap {
+    position: sticky;
+    top: 50%;
+    left: 0;
+    width: 500px;
+    margin-left: auto;
+}
+
+.designConsect .dc_btm_left span {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.designConsect .dc_btm_left strong {
+    display: block;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.designConsect .dc_btm_left .scsy {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 129px;
+    height: 42px;
+    background: url(../img/scsy.jpg) no-repeat center center /cover;
+    transform: translate(-100%, 0);
+    font-size: 0;
+}
+
+.designConsect .dc_btm_left .left_top::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 100%;
+    background: #ddd;
+}
+
+.designConsect .dc_btm_right img {
+    width: 100%;
 }
