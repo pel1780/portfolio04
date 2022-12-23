@@ -18,7 +18,7 @@ body {
 }
 
 * {
-    outline: 1px solid to-mato;
+    outline: 1px solid t-omato;
 }
 
 /* 세팅 css */
@@ -69,7 +69,10 @@ body {
 }
 
 .header .gnb ul {
-    margin: 180px 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .header .gnb ul>li {
@@ -78,9 +81,23 @@ body {
 }
 
 .header .gnb ul>li a {
-    display: block;
+    display: inline-block;
     font-size: 60px;
     font-weight: 500;
+    text-shadow: 0 0 1px #000;
+}
+
+.header .gnb ul>li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #fff;
+    transition: 0.5s;
+}
+
+.header .gnb ul>li:hover a::after {
+    width: 100%;
 }
 
 .header .right a {
@@ -425,6 +442,96 @@ body {
 
 /* design consent */
 
+.banyantreeBanner .banner_wrap .right_banner {
+    flex: 1 0 40%;
+}
+
+.banyantreeBanner .banner_wrap .left_banner {
+    flex: 1 0 60%;
+}
+
+.banyantreeBanner .right_banner {
+    background: url(../img/banner_t01.jpg)no-repeat fixed right center/contain;
+    font-size: 0;
+}
+
+.banyantreeBanner .left_banner {
+    background: url(../img/banner_t02.jpg)no-repeat center center/cover;
+    padding: 100px 290px 100px 100px;
+}
+
+.banyantreeBanner .left_banner .txt {
+    width: 500px;
+    color: #fff;
+    margin-left: auto;
+}
+
+.banyantreeBanner .left_banner strong {
+    display: block;
+    font-size: 65px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.banyantreeBanner .left_banner strong em {
+    display: block;
+    text-align: right;
+}
+
+.banyantreeBanner .left_banner span {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.banyantreeBanner .left_banner p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.65;
+    margin-bottom: 30px;
+    word-break: keep-all;
+}
+
+.banyantreeBanner .left_banner a {
+    position: relative;
+    color: #ad9560;
+    line-height: 1.65;
+}
+
+.banyantreeBanner .left_banner a::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translate(50%, -50%);
+
+    background: #ad9560;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    transition: 0.5s;
+}
+
+.banyantreeBanner .left_banner a:hover::after {
+    width: 26px;
+    height: 26px;
+}
+
+.banyantreeBanner .left_banner a i {
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translate(50%, -50%);
+
+    font-size: 10px;
+    text-align: center;
+    color: #fff;
+    z-index: 999;
+}
+
+/* bantantree banner */
+
 .banyantreeSlide {
     background: #f9f9f9;
 }
@@ -492,6 +599,10 @@ body {
     position: relative;
 }
 
+.banyantreeSlide ul>li.line {
+    border-bottom: 1px solid #ad9560;
+}
+
 .banyantreeSlide ul>li~li::before {
     content: "";
     position: absolute;
@@ -510,90 +621,67 @@ body {
     border: none;
 }
 
-/* banyantree slide */
-.banyantreeBanner .banner_wrap .right_banner {
-    flex: 1 0 45%;
+.banyantreeSlide .btn {
+    justify-content: center;
+    gap: 50px;
+    color: #444444;
+    align-items: center;
 }
 
-.banyantreeBanner .banner_wrap .left_banner {
-    flex: 1 0 55%;
+
+.footer {
+    padding: 60px 0;
+    background: #222;
+    color: #f7f7f7;
+    font-size: 15px;
+    font-weight: 300;
 }
 
-.banyantreeBanner .right_banner {
-    background: url(../img/banner_t01.jpg)no-repeat fixed right center/contain;
+.foot_top {
+    gap: 100px;
 }
 
-.banyantreeBanner .left_banner {
-    background: url(../img/banner_t02.jpg)no-repeat center center/cover;
-    padding: 100px 192px 100px 100px;
+.footer .foot_left {
+    transform: translate(0, -15px);
 }
 
-.banyantreeBanner .left_banner .txt {
-    width: 500px;
-    color: #fff;
-    margin-left: auto;
-}
-
-.banyantreeBanner .left_banner strong {
-    display: block;
-    font-size: 65px;
-    font-weight: 700;
-    line-height: 1.4;
-    margin-bottom: 30px;
-}
-
-.banyantreeBanner .left_banner strong em {
-    display: block;
-    text-align: right;
-}
-
-.banyantreeBanner .left_banner span {
-    display: block;
-    font-size: 20px;
+.footer .foot_left .logo {
     margin-bottom: 20px;
 }
 
-.banyantreeBanner .left_banner p {
-    display: block;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 1.65;
-    margin-bottom: 30px;
+.footer .foot_left .icon {
+    gap: 20px;
+    font-size: 24px;
 }
 
-.banyantreeBanner .left_banner a {
-    position: relative;
-    color: #ad9560;
-    line-height: 1.65;
+.footer .foot_right ul {
+    /* gap: 50px; */
+    margin-bottom: 20px;
 }
 
-.banyantreeBanner .left_banner a::after {
+.footer .foot_right .list_top li::before {
     content: "";
-    position: absolute;
-    top: 50%;
-    right: -20px;
-    transform: translate(50%, -50%);
-
-    background: #ad9560;
-    border-radius: 50%;
-    width: 18px;
-    height: 18px;
-    transition: 0.5s;
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    margin: 0 25px;
+    background: #ddd;
 }
 
-.banyantreeBanner .left_banner a:hover::after {
-    width: 26px;
-    height: 26px;
+.footer .foot_right .list_btm li~li::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    margin: 0 25px;
+    background: #ddd;
 }
 
-.banyantreeBanner .left_banner a i {
-    position: absolute;
-    top: 50%;
-    right: -20px;
-    transform: translate(50%, -50%);
+.footer .foot_right a {
+    color: #ad9560;
+}
 
-    font-size: 10px;
-    text-align: center;
-    color: #fff;
-    z-index: 999;
+.footer address {
+    color: #ad9560;
+    font-size: 12px;
 }

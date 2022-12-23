@@ -4,9 +4,10 @@ $(function () {
         $('.header .right a').toggleClass('on');
     });
 
+
     var lastScrollTop = 0, delta = 5;
 
-    $(window).on('scroll', function (event) {
+    $(window).on('scroll', function () {
         var sct = $(window).scrollTop();
 
         // if (Math.abs(lastScrollTop - st) <= delta) return;
@@ -18,11 +19,6 @@ $(function () {
         };
         lastScrollTop = sct;
 
-
-    });
-
-    $(window).on('scroll', function () {
-        var sct = $(window).scrollTop();
         if (sct > 0) {
             $('.header').addClass('bg')
         } else {
@@ -30,17 +26,46 @@ $(function () {
         };
     });
 
+    // gnb에 hover될때 배경이미지 각각 다르게 주기(html gnb>li에 data-img로 변경)
+    $('.header .gnb ul li').mouseenter(function () {
+        var change_image = $(this).attr('data-img')
+        $('.header .gnb').css({
+            'background-image': 'url(' + change_image + ')'
+        })
+    })
+    $('.header .gnb ul li').mouseleave(function () {
+        $('.header .gnb').css({
+            'background-image': ''
+        })
+    })
+
+    // slide
     $('.bt_slide').slick({
         slidesToShow: 1,
         centerMode: true,
         variableWidth: true,
         arrows: false,
+
     });
 
     $('.banyantreeSlide .dots li').on('click', function () {
         var slide_list_number = $(this).index();
         $('.bt_slide').slick('slickGoTo', slide_list_number);
+    });
+
+    $('.banyantreeSlide .btn .prev i').on('click', function () {
+        $('.bt_slide').slick('slickPrev');
     })
+
+    $('.banyantreeSlide .btn .next i').on('click', function () {
+        $('.bt_slide').slick('slickNext');
+    })
+
+    $('.bt_slide').on('afterChange', function (e, s, c) {
+        $('.banyantreeSlide .dots li').eq(c).addClass('line').siblings().removeClass('line');
+    })
+
+
 
 
 
