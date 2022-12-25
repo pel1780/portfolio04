@@ -39,6 +39,20 @@ $(function () {
         })
     })
 
+    // mainVisual slide
+
+    $('.visual_top').slick({
+        autoplay:true,
+        autoplaySpeed:2000,
+        arrows:false,
+    });
+
+    $('.visual_btm').slick({
+        autoplay:true,
+        autoplaySpeed:2000,
+        arrows:false,
+    });
+
     // slide
     $('.bt_slide').slick({
         slidesToShow: 1,

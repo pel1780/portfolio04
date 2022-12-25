@@ -143,48 +143,44 @@ body {
 }
 
 /* header */
-
-.mainVisual {
-    background: url(../img/mainvisual_bg.jpg) no-repeat fixed center center/cover;
-    padding: 200px 0 100px 0;
-    height: 100vh;
+.mainVisual .itm{
+    height: 50vh;
 }
 
-.mainVisual .top h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
+.mainVisual .visual_top .top_itm01{
+    background: url(../img/mainvisual_bg.jpg) no-repeat top center/cover ;
+}
 
-    font-size: 100px;
+.mainVisual .visual_top .top_itm02{
+    background: url(../img/nav_hover05.jpg) no-repeat top center/cover ;
+}
+.mainVisual .visual_btm .btm_itm01{
+    background: url(../img/mainvisual_bg.jpg) no-repeat bottom center/cover ;
+}
+.mainVisual .visual_btm .btm_itm02{
+    background: url(../img/nav_hover05.jpg) no-repeat bottom center/cover ;
+}
+
+.mainVisual .itm strong{
+    display: block;
+    font-size: 50px;
     font-weight: 700;
-    color: #fff;
-    letter-spacing: 3px;
     text-align: center;
-
-    z-index: 1;
+    color: #fff;
+    word-break: keep-all;
+}
+.mainVisual .visual_top .itm{
+    position: relative;
+}
+.mainVisual .visual_top strong{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
 }
 
-.mainVisual .top h2 em {
-    padding: 0 100px;
-}
-
-.mainVisual .top figure {
-    overflow: hidden;
-}
-
-.mainVisual .top figure img {
-    max-width: 100%;
-    transform: scale(1.2);
-    animation: zoom-out 5s forwards linear;
-}
-
-@keyframes zoom-out {
-    to {
-        transform: scale(1);
-    }
-}
+/* 
 
 .mainVisual .bottom .scroll_down {
     position: absolute;
@@ -201,7 +197,7 @@ body {
     to {
         transform: rotate(360deg);
     }
-}
+} */
 
 /* main visual */
 
