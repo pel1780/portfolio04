@@ -143,36 +143,42 @@ body {
 }
 
 /* header */
-.mainVisual .itm{
+.mainVisual .itm {
     height: 50vh;
 }
 
-.mainVisual .visual_top .top_itm01{
-    background: url(../img/mainvisual_bg.jpg) no-repeat top center/cover ;
+.mainVisual .visual_top .top_itm01 {
+    background: url(../img/mainvisual_bg.jpg) no-repeat top 10px center/cover;
 }
 
-.mainVisual .visual_top .top_itm02{
-    background: url(../img/nav_hover05.jpg) no-repeat top center/cover ;
-}
-.mainVisual .visual_btm .btm_itm01{
-    background: url(../img/mainvisual_bg.jpg) no-repeat bottom center/cover ;
-}
-.mainVisual .visual_btm .btm_itm02{
-    background: url(../img/nav_hover05.jpg) no-repeat bottom center/cover ;
+.mainVisual .visual_top .top_itm02 {
+    background: url(../img/nav_hover05.jpg) no-repeat top 10px center/cover;
 }
 
-.mainVisual .itm strong{
+.mainVisual .visual_btm .btm_itm01 {
+    background: url(../img/mainvisual_bg.jpg) no-repeat bottom center/cover;
+}
+
+.mainVisual .visual_btm .btm_itm02 {
+    background: url(../img/nav_hover05.jpg) no-repeat bottom center/cover;
+}
+
+.mainVisual .itm strong {
     display: block;
-    font-size: 50px;
+    font-size: 70px;
     font-weight: 700;
     text-align: center;
     color: #fff;
     word-break: keep-all;
+    line-height: 1.6;
+    text-shadow: 0 0 1px #000;
 }
-.mainVisual .visual_top .itm{
+
+.mainVisual .visual_top .itm {
     position: relative;
 }
-.mainVisual .visual_top strong{
+
+.mainVisual .visual_top strong {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -180,16 +186,18 @@ body {
     width: 100%;
 }
 
-/* 
+.mainVisual .btm_itm01 strong {
+    font-size: 45px;
+}
 
-.mainVisual .bottom .scroll_down {
+.mainVisual .scroll_down {
     position: absolute;
-    bottom: 130px;
+    bottom: 10px;
     left: 50%;
     transform: translate(-50%, 0);
 }
 
-.mainVisual .bottom .scroll_down figure {
+.mainVisual .scroll_down figure {
     animation: rotate 5s infinite linear;
 }
 
@@ -197,7 +205,7 @@ body {
     to {
         transform: rotate(360deg);
     }
-} */
+}
 
 /* main visual */
 

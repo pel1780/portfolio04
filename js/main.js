@@ -42,15 +42,20 @@ $(function () {
     // mainVisual slide
 
     $('.visual_top').slick({
-        autoplay:true,
-        autoplaySpeed:2000,
-        arrows:false,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        speed: 700,
+        arrows: false,
+        asNavFor: '.visual_btm',
     });
 
     $('.visual_btm').slick({
-        autoplay:true,
-        autoplaySpeed:2000,
-        arrows:false,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        speed: 700,
+        arrows: false,
+        asNavFor: '.visual_top',
+        rtl: true,
     });
 
     // slide
