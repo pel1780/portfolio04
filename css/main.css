@@ -21,6 +21,11 @@ body {
     outline: 1px solid t-omato;
 }
 
+.slick-list,
+.slick-trank {
+    transition-delay: 0.3s;
+}
+
 /* 세팅 css */
 
 .header {
@@ -653,17 +658,13 @@ body {
     margin-bottom: 20px;
 }
 
-.footer .foot_left .icon {
-    gap: 20px;
-    font-size: 24px;
-}
+
 
 .footer .foot_right ul {
-    /* gap: 50px; */
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-.footer .foot_right .list_top li::before {
+.footer .foot_right .list_top li~li::before {
     content: "";
     display: inline-block;
     width: 1px;
@@ -683,6 +684,22 @@ body {
 
 .footer .foot_right a {
     color: #ad9560;
+}
+
+.footer .inner {
+    position: relative;
+}
+
+.footer .foot_btm {
+    justify-content: space-between;
+    align-items: center;
+    width: 928px;
+    margin-left: auto;
+}
+
+.footer .foot_btm .icon {
+    gap: 20px;
+    font-size: 24px;
 }
 
 .footer address {
