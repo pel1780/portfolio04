@@ -17,13 +17,30 @@ body {
     padding: 100px 0;
 }
 
-* {
-    outline: 1px solid t-omato;
-}
-
 .slick-list,
 .slick-trank {
-    transition-delay: 0.3s;
+    transition-delay: 0.7s;
+}
+
+@media (max-width: 768px) {
+    body {
+        color: #444444;
+        font-size: 18px;
+    }
+
+    .inner {
+        width: auto;
+        margin: 0 15px;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sec {
+        padding: 80px 0;
+    }
 }
 
 /* 세팅 css */
@@ -131,6 +148,7 @@ body {
 .header .btm_left a {
     color: #fff;
     padding: 10px 20px;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
 .header .btm_right {
@@ -147,63 +165,113 @@ body {
     padding: 10px 20px;
 }
 
+@media (max-width: 768px) {
+    .header {
+        height: 80px;
+        line-height: 1;
+        padding: 15px;
+    }
+
+    .header.on {
+        top: -80px;
+    }
+
+    .header.bg {
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    .header .gnb_wrap {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header h1 {
+        height: 50px;
+    }
+
+    .header h1 img {
+        height: 100%;
+    }
+
+    .header .gnb ul>li {
+        line-height: 60px;
+    }
+
+    .header .gnb ul>li a {
+        font-size: 20px;
+        font-weight: 900;
+    }
+
+    .header .right {
+        line-height: 55px;
+    }
+
+    .header .btm_left {
+        left: -53px;
+    }
+
+    .header .btm_right {
+        right: 15px;
+    }
+
+    .header .btm_right a::before {
+        content: "\e9d3";
+        font-family: xeicon;
+        font-size: 20px;
+        color: #fff;
+        padding: 15px;
+        border-radius: 50%;
+        border: 1px solid #f8f8f8;
+        background: rgba(0, 0, 0, 0.5);
+
+    }
+
+    .header .btm_right a {
+        background: transparent;
+        border: none;
+        padding: 0;
+        font-size: 0;
+    }
+}
+
 /* header */
-.mainVisual .itm {
-    height: 50vh;
-}
-
-.mainVisual .visual_top .top_itm01 {
-    background: url(../img/mainvisual_bg.jpg) no-repeat top 10px center/cover;
-}
-
-.mainVisual .visual_top .top_itm02 {
-    background: url(../img/nav_hover05.jpg) no-repeat top 10px center/cover;
-}
-
-.mainVisual .visual_btm .btm_itm01 {
-    background: url(../img/mainvisual_bg.jpg) no-repeat bottom center/cover;
-}
-
-.mainVisual .visual_btm .btm_itm02 {
-    background: url(../img/nav_hover05.jpg) no-repeat bottom center/cover;
-}
-
-.mainVisual .itm strong {
-    display: block;
-    font-size: 70px;
-    font-weight: 700;
-    text-align: center;
-    color: #fff;
-    word-break: keep-all;
-    line-height: 1.6;
-    text-shadow: 0 0 1px #000;
-}
-
-.mainVisual .visual_top .itm {
+.mainVisual {
     position: relative;
+    height: 100vh;
 }
 
-.mainVisual .visual_top strong {
+.mainVisual h2 {
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 100%;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translate(0, -50%);
+    color: #fff;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 900;
+    z-index: 99;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
-.mainVisual .btm_itm01 strong {
-    font-size: 45px;
+.mainVisual .itm img {
+    height: 969px;
 }
 
 .mainVisual .scroll_down {
     position: absolute;
-    bottom: 10px;
+    bottom: 50px;
     left: 50%;
     transform: translate(-50%, 0);
 }
 
 .mainVisual .scroll_down figure {
+    width: 120px;
     animation: rotate 5s infinite linear;
+}
+
+.mainVisual .scroll_down figure img {
+    width: 100%;
 }
 
 @keyframes rotate {

@@ -41,22 +41,16 @@ $(function () {
 
     // mainVisual slide
 
-    $('.visual_top').slick({
+    $('.main_slide').slick({
+        fade: true,
         autoplay: true,
         autoplaySpeed: 4000,
         speed: 700,
         arrows: false,
-        asNavFor: '.visual_btm',
+        pauseOnHover: false,
+        pauseOnFocus: false,
     });
 
-    $('.visual_btm').slick({
-        autoplay: true,
-        autoplaySpeed: 4000,
-        speed: 700,
-        arrows: false,
-        asNavFor: '.visual_top',
-        rtl: true,
-    });
 
     // slide
     $('.bt_slide').slick({
