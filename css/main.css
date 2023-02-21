@@ -1,6 +1,10 @@
+html {
+    font-size: 10px;
+}
+
 body {
     color: #444444;
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 
 .inner {
@@ -22,10 +26,13 @@ body {
     transition-delay: 0.7s;
 }
 
+p {
+    word-break: keep-all;
+}
+
 @media (max-width: 768px) {
     body {
-        color: #444444;
-        font-size: 18px;
+        font-size: 1.4rem;
     }
 
     .inner {
@@ -34,7 +41,6 @@ body {
     }
 
     .flex {
-        display: flex;
         flex-direction: column;
     }
 
@@ -54,7 +60,7 @@ body {
     padding: 0 80px;
     z-index: 999;
     background: rgba(0, 0, 0, 0);
-    transition: 0.33s;
+    transition: 0.3s;
 }
 
 .header.on {
@@ -104,7 +110,7 @@ body {
 
 .header .gnb ul>li a {
     display: inline-block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 500;
     text-shadow: 0 0 1px #000;
 }
@@ -124,7 +130,6 @@ body {
 
 .header .right a {
     color: #fff;
-    font-size: 18px;
 }
 
 .header .right a::after {
@@ -193,12 +198,18 @@ body {
         height: 100%;
     }
 
+    .header .gnb ul {
+        left: 0;
+        right: 0;
+        transform: translate(0, -50%);
+    }
+
     .header .gnb ul>li {
         line-height: 60px;
     }
 
     .header .gnb ul>li a {
-        font-size: 20px;
+        font-size: 3rem;
         font-weight: 900;
     }
 
@@ -207,7 +218,7 @@ body {
     }
 
     .header .btm_left {
-        left: -53px;
+        left: -43px;
     }
 
     .header .btm_right {
@@ -217,7 +228,7 @@ body {
     .header .btm_right a::before {
         content: "\e9d3";
         font-family: xeicon;
-        font-size: 20px;
+        font-size: 2rem;
         color: #fff;
         padding: 15px;
         border-radius: 50%;
@@ -248,7 +259,7 @@ body {
     transform: translate(0, -50%);
     color: #fff;
     text-align: center;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 900;
     z-index: 99;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
@@ -277,6 +288,22 @@ body {
 @keyframes rotate {
     to {
         transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .mainVisual {
+        position: relative;
+        height: 80vh;
+    }
+
+    .mainVisual h2 {
+        font-size: 5.2rem;
+        line-height: 1.1;
+    }
+
+    .mainVisual .itm img {
+        height: 80vh;
     }
 }
 
@@ -315,7 +342,7 @@ body {
 
 .mainContent .right_txt strong {
     display: block;
-    font-size: 50px;
+    font-size: 5rem;
     font-weight: 500;
     line-height: 1.3;
     margin-bottom: 30px;
@@ -323,7 +350,7 @@ body {
 
 .mainContent .right_txt span {
     display: block;
-    font-size: 22px;
+    font-size: 2.2rem;
     margin-bottom: 20px;
 }
 
@@ -331,16 +358,64 @@ body {
     font-weight: 300;
 }
 
+@media (max-width: 768px) {
+    .mainContent {
+        background: url(../img/mainContent01_bg.jpg) no-repeat center center /cover;
+    }
+
+    .mainContent .inner {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    .mainContent .inner>div {
+        height: auto;
+    }
+
+    .mainContent .left_img {
+        position: relative;
+    }
+
+    .mainContent .left_img figure {
+        position: static;
+        text-align: right;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        margin-left: auto;
+    }
+
+    .mainContent .left_img img {
+        width: 100%;
+    }
+
+    .mainContent .right_txt {
+        padding: 0;
+    }
+
+    .mainContent .right_txt strong {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+    .mainContent .right_txt span {
+        font-size: 2rem;
+    }
+
+    .mainContent .right_txt p {
+        font-weight: 400;
+    }
+}
+
 /* main content */
 
 .mainBanner {
     background: url(../img/banner01_bg.jpg) no-repeat center top /cover;
     color: #082b26;
-    ;
 }
 
 .mainBanner h2 {
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 500;
     text-align: center;
     margin-bottom: 30px;
@@ -348,7 +423,7 @@ body {
 
 .mainBanner p {
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .mainBanner .inner .itm {
@@ -365,9 +440,56 @@ body {
 }
 
 .mainBanner .itm strong {
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 500;
     margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .mainBanner {
+        background: url(../img/banner01_bg.jpg) no-repeat center top /cover;
+        color: #082b26;
+    }
+
+    .mainBanner h2 {
+        font-size: 3.2rem;
+        margin: 0 15px;
+    }
+
+    .mainBanner p {
+        text-align: center;
+        margin-bottom: 40px;
+        margin: 0 15px;
+    }
+
+    .mainBanner .inner {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .mainBanner .inner .itm {
+        flex: 1 0 45%;
+
+        display: flex;
+        flex-direction: column;
+        border-left: none;
+    }
+
+    .mainBanner .inner .itm:nth-of-type(4) {
+        border-right: none;
+    }
+
+    .mainBanner .itm strong {
+        font-size: 4rem;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+
+    .mainBanner .itm span {
+        line-height: 1.1;
+        word-break: keep-all;
+    }
 }
 
 /* main banner */
@@ -383,17 +505,16 @@ body {
     width: 100%;
     height: 350px;
     background: url(../img/consect_bg.jpg) no-repeat fixed center center/cover;
-
 }
 
 .designConsect .dc_top strong {
     display: block;
-    font-size: 25px;
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
 .designConsect .dc_top h2 {
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 500;
     margin-bottom: 50px;
     transform: translate(-4px, 0);
@@ -424,7 +545,7 @@ body {
 
 .designConsect .dc_btm_left strong {
     display: block;
-    font-size: 25px;
+    font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 30px;
 }
@@ -486,8 +607,7 @@ body {
 }
 
 .designConsect .dc_btm_left a:hover::after {
-    width: 26px;
-    height: 26px;
+    transform: translate(50%, -50%) scale(1.3);
 }
 
 .designConsect .dc_btm_left a i {
@@ -496,7 +616,7 @@ body {
     right: -20px;
     transform: translate(50%, -50%);
 
-    font-size: 10px;
+    font-size: 1rem;
     text-align: center;
     color: #fff;
     z-index: 999;
@@ -508,13 +628,105 @@ body {
 
 .designConsect .dc_btm_right span {
     display: block;
-    font-size: 25px;
+    font-size: 2.5rem;
     font-weight: 500;
     margin-bottom: 100px;
 }
 
 .designConsect .dc_btm_right figure:last-child span {
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    .designConsect .dc_top {
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .designConsect .dc_top::after {
+        display: none;
+    }
+
+    .designConsect .dc_top strong {
+        font-size: 1.4rem;
+    }
+
+    .designConsect .dc_top h2 {
+        font-size: 3.2rem;
+        margin-bottom: 50px;
+        transform: translate(-4px, 0);
+    }
+
+    .designConsect .dc_btm_left {
+        padding-right: 0;
+    }
+
+    .designConsect .dc_btm_left_wrap {
+        position: static;
+        width: auto;
+        transform: translate(0, 0);
+        margin-left: auto;
+        margin-top: auto;
+        text-align: center;
+    }
+
+    .designConsect .dc_btm_left span {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .designConsect .dc_btm_left strong {
+        display: block;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .designConsect .left_top::after {
+        display: none;
+    }
+
+    .designConsect .dc_btm_left .scsy {
+        position: static;
+        margin: 0 auto 30px auto;
+        width: 85px;
+        height: 24px;
+        transform: translate(0, 0);
+    }
+
+    .designConsect .dc_btm_left p {
+        margin: 0 10px 10px 10px;
+    }
+
+    .designConsect .dc_btm_left p:last-of-type {
+        margin-bottom: 20px;
+    }
+
+    .designConsect .dc_btm_left a {
+        display: inline-block;
+        margin-bottom: 30px;
+        text-align: center;
+        line-height: 1.6;
+    }
+
+    .designConsect .dc_btm_left a:hover::after {
+        transform: translate(50%, -50%) scale(1.1);
+    }
+
+    .designConsect .dc_btm_right {
+        margin: 0 15px;
+    }
+
+    .designConsect .dc_btm_right .img_wrap {
+        margin-bottom: 20px;
+    }
+
+    .designConsect .dc_btm_right span {
+        display: block;
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 50px;
+    }
 }
 
 /* design consent */
@@ -545,7 +757,7 @@ body {
 
 .banyantreeBanner .left_banner strong {
     display: block;
-    font-size: 65px;
+    font-size: 6.5rem;
     font-weight: 700;
     line-height: 1.4;
     margin-bottom: 30px;
@@ -558,12 +770,12 @@ body {
 
 .banyantreeBanner .left_banner span {
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     margin-bottom: 30px;
 }
 
 .banyantreeBanner .left_banner p {
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 300;
     line-height: 1.65;
     margin-bottom: 30px;
@@ -591,8 +803,7 @@ body {
 }
 
 .banyantreeBanner .left_banner a:hover::after {
-    width: 26px;
-    height: 26px;
+    transform: translate(50%, -50%) scale(1.3);
 }
 
 .banyantreeBanner .left_banner a i {
@@ -601,10 +812,54 @@ body {
     right: -20px;
     transform: translate(50%, -50%);
 
-    font-size: 10px;
+    font-size: 1rem;
     text-align: center;
     color: #fff;
     z-index: 999;
+}
+
+@media (max-width: 768px) {
+    .banyantreeBanner .banner_wrap .right_banner {
+        flex: auto;
+        height: 200px;
+    }
+
+    .banyantreeBanner .banner_wrap .left_banner {
+        flex: auto;
+    }
+
+    .banyantreeBanner .right_banner {
+        background: url(../img/banner_t01.jpg)no-repeat right center/cover;
+    }
+
+    .banyantreeBanner .left_banner {
+        background: url(../img/banner_t02.jpg)no-repeat center center/cover;
+        padding: 80px 0;
+    }
+
+    .banyantreeBanner .left_banner .txt {
+        width: auto;
+        margin: 0 15px;
+    }
+
+    .banyantreeBanner .left_banner strong {
+        font-size: 4rem;
+        line-height: 1.3;
+        margin-bottom: 24px;
+    }
+
+    .banyantreeBanner .left_banner span {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .banyantreeBanner .left_banner p {
+        line-height: 1.6;
+    }
+
+    .banyantreeBanner .left_banner a:hover::after {
+        transform: translate(50%, -50%) scale(1.1);
+    }
 }
 
 /* bantantree banner */
@@ -614,7 +869,7 @@ body {
 }
 
 .banyantreeSlide h2 {
-    font-size: 50px;
+    font-size: 5rem;
     font-weight: 500;
     color: #082b26;
     text-align: center;
@@ -642,7 +897,7 @@ body {
 
 .banyantreeSlide .bt_slide strong {
     display: block;
-    font-size: 25px;
+    font-size: 2.5rem;
 
     margin-bottom: 20px;
 }
@@ -657,7 +912,7 @@ body {
 .banyantreeSlide .bt_slide .txt {
     border: 1px solid #ad9560;
     color: #ad9560;
-    font-size: 13px;
+    font-size: 1.3rem;
     font-weight: 300;
     line-height: 2;
 }
@@ -692,10 +947,10 @@ body {
 }
 
 .banyantreeSlide ul>li button {
-    font-size: 18px;
     color: #082b26;
     background: transparent;
     border: none;
+    outline: none;
 }
 
 .banyantreeSlide .btn {
@@ -705,12 +960,109 @@ body {
     align-items: center;
 }
 
+@media (max-width: 768px) {
+    .banyantreeSlide {
+        background: #f9f9f9;
+    }
 
+    .banyantreeSlide h2 {
+        font-size: 3.2rem;
+    }
+
+    .banyantreeSlide .img_wrap img {
+        width: 100%;
+    }
+
+    .banyantreeSlide .bt_slide {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .banyantreeSlide .bt_slide figure {
+        width: auto;
+        padding: 0;
+    }
+
+    .banyantreeSlide .bt_slide .img_wrap {
+        margin-bottom: 30px;
+    }
+
+    .banyantreeSlide .bt_slide strong {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .banyantreeSlide .bt_slide p {
+        margin-bottom: 20px;
+        height: 100px;
+    }
+
+    .banyantreeSlide .bt_slide .txt {
+        margin: 0 5px;
+    }
+
+    .banyantreeSlide ul {
+        gap: 0;
+    }
+
+    .banyantreeSlide ul>li {
+        position: relative;
+    }
+
+    .banyantreeSlide ul>li~li::before {
+        display: none;
+    }
+
+    .banyantreeSlide ul>li button {
+        color: #082b26;
+        background: transparent;
+        border: none;
+    }
+
+    .banyantreeSlide .btn {
+        flex-direction: row;
+        font-size: 20px;
+    }
+
+    .banyantreeSlide .dots {
+        flex-direction: row;
+        font-size: 0;
+        width: 300px;
+    }
+
+    .banyantreeSlide .dots li {
+        position: relative;
+        flex: 1;
+    }
+
+    .banyantreeSlide .dots li::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    .banyantreeSlide .dots li.line {
+        border-bottom: none;
+    }
+
+    .banyantreeSlide .dots li.line::after {
+        background: #ad9560;
+    }
+
+}
+
+/*  */
 .footer {
     padding: 60px 0;
     background: #222;
     color: #f7f7f7;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 300;
 }
 
@@ -725,8 +1077,6 @@ body {
 .footer .foot_left .logo {
     margin-bottom: 20px;
 }
-
-
 
 .footer .foot_right ul {
     margin-bottom: 10px;
@@ -767,10 +1117,68 @@ body {
 
 .footer .foot_btm .icon {
     gap: 20px;
-    font-size: 24px;
+    font-size: 2.4rem;
 }
 
 .footer address {
     color: #ad9560;
-    font-size: 12px;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 45px 0;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .foot_top {
+        gap: 0;
+    }
+
+    .footer .foot_left {
+        transform: translate(0, 0);
+    }
+
+    .footer .foot_left .logo {
+        margin: 0 auto 20px auto;
+        width: 140px;
+    }
+
+    .footer .foot_left .logo img {
+        width: 100%;
+    }
+
+    .footer .foot_right ul {
+        margin-bottom: 10px;
+        line-height: 1.3;
+    }
+
+    .footer .foot_right {
+        margin-bottom: 30px;
+    }
+
+    .footer .foot_right .list_top li~li::before {
+        display: none;
+    }
+
+    .footer .foot_right .list_btm li~li::before {
+        display: none;
+    }
+
+    .footer .inner {
+        position: relative;
+    }
+
+    .footer .foot_btm {
+        flex-direction: column-reverse;
+        width: auto;
+    }
+
+    .footer .foot_btm .icon {
+        flex-direction: row;
+        gap: 20px;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
 }

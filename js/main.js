@@ -58,7 +58,15 @@ $(function () {
         centerMode: true,
         variableWidth: true,
         arrows: false,
-
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: false,
+                    variableWidth: false,
+                }
+            }]
     });
 
     $('.banyantreeSlide .dots li').on('click', function () {
