@@ -447,11 +447,6 @@ p {
 }
 
 @media (max-width: 768px) {
-    .mainBanner {
-        background: url(../img/banner01_bg.jpg) no-repeat center top /cover;
-        color: #082b26;
-    }
-
     .mainBanner h2 {
         font-size: 3.2rem;
         margin: 0 15px 30px 15px;
@@ -469,9 +464,6 @@ p {
 
     .mainBanner .inner .itm {
         flex: 1 0 45%;
-
-        display: flex;
-        flex-direction: column;
         border-left: none;
     }
 
