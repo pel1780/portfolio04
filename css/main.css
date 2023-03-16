@@ -302,8 +302,15 @@ p {
         line-height: 1.1;
     }
 
+    .mainVisual .itm {
+        position: relative;
+    }
+
     .mainVisual .itm img {
+        position: relative;
+        left: 50%;
         height: 80vh;
+        transform: translate(-50%, 0);
     }
 }
 
